@@ -1,0 +1,47 @@
+import { Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function HeroBanner() {
+  return (
+    <section id="overview" className="relative w-full overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-black/70 dark:from-black/80 dark:via-black/60 dark:to-black/80"></div>
+
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-60 dark:opacity-40"></div>
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-20 mx-auto max-w-7xl px-4 py-32 md:py-40 lg:py-52">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+          <div className="max-w-3xl space-y-4">
+            <h1 className="text-4xl font-bold tracking-tighter text-white drop-shadow-md sm:text-5xl md:text-6xl lg:text-7xl">
+              Discover Amazing Movies
+            </h1>
+
+            <p className="mx-auto max-w-2xl text-lg text-white/80 drop-shadow-sm md:text-xl">
+              Explore our collection of the best movies from around the world.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
+              <Play className="h-4 w-4" />
+              Browse Movies
+            </Button>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary/30 bg-primary/10 text-white backdrop-blur-sm hover:bg-primary/20 hover:text-white"
+            >
+              Latest Releases
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { inter, roboto_mono } from "./font";
+import { inter, roboto_mono } from "@/app/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "CineScope Dashboard",
@@ -10,17 +11,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" data-theme="light">
       <body
-        className={`${inter.variable} ${roboto_mono.variable} antialiased font-inter`}
+        className={cn(inter.variable, roboto_mono.variable, inter.className)}
       >
-        <div className="flex flex-col min-h-screen">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
