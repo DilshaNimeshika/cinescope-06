@@ -7,7 +7,7 @@ export default function HeroBanner() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-black/70 dark:from-black/80 dark:via-black/60 dark:to-black/80"></div>
+        <div className="absolute inset-0 z-10 bg-linear-to-r from-black/70 via-black/50 to-black/70 dark:from-black/80 dark:via-black/60 dark:to-black/80"></div>
 
         {/* Background Image */}
         <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-60 dark:opacity-40"></div>
